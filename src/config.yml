@@ -1,0 +1,18 @@
+
+###########################
+#			HEAL	      #
+###########################
+heal: 20.0
+heal-message: "&aYou have been healed"
+
+###########################
+#	    	FEED	      #
+###########################
+feed: 20
+feed-message: "&aYou have been feeded"
+
+###########################
+#         PLAYER          #
+###########################
+player:
+	notFound: "&4Player not found!"

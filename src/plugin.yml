@@ -6,3 +6,12 @@ api-version: 1.13
 
 commands:
    takkapip:
+   heal:
+     description: This command will fill your hearts.
+     permission: takkapi.heal
+     usage: "Usage /<command>"
+   feed:
+     aliases: eat
+     description: This command will fill your stomach with food.
+     permission: takkapi.feed
+     usage: "Usage /<command>"
