@@ -1,8 +1,0 @@
-main: md.takkapi.plugin.Main
-name: TakkapiPlugin
-version: 1.0
-author: Takkapi
-api-version: 1.13
-
-commands:
-   takkapip:
