@@ -2,13 +2,13 @@
 ###########################
 #			HEAL	      #
 ###########################
-heal: 20.0
+heal-amount: 20.0
 heal-message: "&aYou have been healed"
 
 ###########################
 #	    	FEED	      #
 ###########################
-feed: 20
+feed-amount: 20
 feed-message: "&aYou have been feeded"
 
 ###########################
@@ -16,3 +16,4 @@ feed-message: "&aYou have been feeded"
 ###########################
 player:
 	notFound: "&4Player not found!"
+	noPerms: "&4You don't have the permission to execute this command"

@@ -25,7 +25,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String label, String
 					if (sender instanceof Player) {
 						//heal
 						Player player = (Player) sender;
-						player.setFoodLevel(plugin.getConfig().getInt("feed"));
+						player.setFoodLevel(plugin.getConfig().getInt("feed-amount"));
 						player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("feed-message")));
 						return true;
 					}
@@ -35,7 +35,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String label, String
 				if (args.length >= 1) {
 					Player target = Bukkit.getServer().getPlayer(args[0]);
 					if (target != null) {
-						target.setFoodLevel(plugin.getConfig().getInt("feed"));
+						target.setFoodLevel(plugin.getConfig().getInt("feed-amount"));
 						target.sendMessage(ChatColor.GREEN + "You have been feeded!");
 						sender.sendMessage(ChatColor.GREEN + "You feeded " + target.getName());
 						return true;
@@ -44,7 +44,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String label, String
 					return true;
 				}
 			} else {
-				sender.sendMessage(ChatColor.DARK_RED + "You don't have permission to execute this command");
+				sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("player.notFound")));
 			}
 		}
 		

@@ -25,8 +25,8 @@ public class Heal implements CommandExecutor{
 					if (sender instanceof Player) {
 						//heal
 						Player player = (Player) sender;
-						player.setHealth(plugin.getConfig().getDouble("heal"));
-						player.setFoodLevel(plugin.getConfig().getInt("feed"));
+						player.setHealth(plugin.getConfig().getDouble("heal-amount"));
+						player.setFoodLevel(plugin.getConfig().getInt("feed-amount"));
 						player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("heal-message")));
 						return true;
 					}
@@ -36,8 +36,8 @@ public class Heal implements CommandExecutor{
 				if (args.length >= 1) {
 					Player target = Bukkit.getServer().getPlayer(args[0]);
 					if (target != null) {
-						target.setHealth(plugin.getConfig().getDouble("heal"));
-						target.setFoodLevel(plugin.getConfig().getInt("feed"));
+						target.setHealth(plugin.getConfig().getDouble("heal-amount"));
+						target.setFoodLevel(plugin.getConfig().getInt("feed-amount"));
 						target.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("heal-message")));
 						sender.sendMessage(ChatColor.GREEN + "You healed " + target.getName());
 						return true;
@@ -46,7 +46,7 @@ public class Heal implements CommandExecutor{
 					return true;
 				}
 			} else {
-				sender.sendMessage(ChatColor.DARK_RED + "You don't have permission to execute this command");
+				sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("player.noPerms")));
 			}
 		}
 		
